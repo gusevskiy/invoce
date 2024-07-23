@@ -36,6 +36,10 @@
       <IsMain>false</IsMain>
       <Path>test.pix</Path>
     </ProjectFileItem>
+    <ProjectFileItem z:Id="i5">
+      <IsMain>false</IsMain>
+      <Path>json_read.pix</Path>
+    </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
   <Name>Recognition_Invoice</Name>
