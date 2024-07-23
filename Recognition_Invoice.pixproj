@@ -1,6 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <RobotizationProject xmlns:i="http://www.w3.org/2001/XMLSchema-instance" z:Id="i1" xmlns:z="http://schemas.microsoft.com/2003/10/Serialization/" xmlns="http://schemas.datacontract.org/2004/07/BR.Logic">
-  <Dependencies i:nil="true" />
+  <Dependencies>
+    <ProjectDependency>
+      <Dependencies i:nil="true" />
+      <FileName>Activities.Portable.Python3.1.0.0.1.nupkg</FileName>
+      <Hash>Activities.Portable.Python3.1.0.0.1.nupkg</Hash>
+      <Id>Activities.Portable.Python3</Id>
+      <MasterUrl>https://srvnn.pix.ru</MasterUrl>
+      <Name>Activities.Portable.Python3</Name>
+      <ServerUrl i:nil="true" />
+      <Version>1.0.0.1</Version>
+    </ProjectDependency>
+    <ProjectDependency>
+      <Dependencies />
+      <FileName>python.3.13.0-b4.nupkg</FileName>
+      <Hash>CEYcue/PBkhufZivnupY16fkxSkYAwx4kg1bCf5Uf4I=</Hash>
+      <Id>python</Id>
+      <MasterUrl i:nil="true" />
+      <Name>python</Name>
+      <ServerUrl>nuget.org</ServerUrl>
+      <Version>3.13.0-b4</Version>
+    </ProjectDependency>
+  </Dependencies>
   <Description></Description>
   <Files>
     <ProjectFileItem z:Id="i2">
@@ -10,6 +31,10 @@
     <ProjectFileItem z:Id="i3">
       <IsMain>false</IsMain>
       <Path>PdfImages.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i4">
+      <IsMain>false</IsMain>
+      <Path>test.pix</Path>
     </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
