@@ -106,7 +106,7 @@
                       <PropertyValue z:Id="i16">
                         <PropertyName>Value</PropertyName>
                         <_dataType>Expression</_dataType>
-                        <_expression>@"C:\DEV_PIX\Dbrain_Artem\IN_Files\PIX PagСчет на оплату № 16284 от 04.07.2024eImage_2.png"</_expression>
+                        <_expression>@"C:\DEV_PIX\Dbrain_Artem\IN_Files\Счет удлинитель.png"</_expression>
                         <_screenShotBase64 i:nil="true" />
                         <_value i:nil="true" />
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
