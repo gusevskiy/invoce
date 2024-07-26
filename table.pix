@@ -273,120 +273,205 @@ text - текст значения ячейки</Text>
       </AbstractStep>
       <AbstractStep z:Id="i27" i:type="CommentStep">
         <Childs />
+        <Id>cbb5dd4b-fe53-4005-9b42-294feae0dbb7</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues />
+        <SelectedOptionId i:nil="true" />
+        <Text>Добавляем сразу строки в dt. Их кол-во указано в параметре table["rowCount"]</Text>
+      </AbstractStep>
+      <AbstractStep z:Id="i28" i:type="ExecutedStep">
+        <Childs />
+        <Id>752c8d60-9328-466c-9671-6ee63eda7fe9</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i29">
+            <PropertyName>Value</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>Convert.ToInt32(table["rowCount"].ToString())</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i30">
+            <PropertyName>To</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>test</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.Assign</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i31" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i32" i:type="ExecutedStep">
+            <Childs />
+            <Id>99a83879-43ae-4192-989a-a528a10fdc22</Id>
+            <Parent z:Ref="i31" />
+            <PropertyValues>
+              <PropertyValue z:Id="i33">
+                <PropertyName>CSCode</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:string">data_table.Rows.Add();</_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Добавляем пустую строку в пустой dt (другого ни чего не придумал)</Text>
+            <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>0e8b45c6-dff3-4e45-aa2d-6cd697ab97bb</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i34">
+            <PropertyName>To</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>Convert.ToInt32(table["rowCount"].ToString()) + 1</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i35">
+            <PropertyName>Index</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression></_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.LoopFor</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i36" i:type="ExecutedStep">
+        <Childs>
+          <AbstractStep z:Id="i37" i:type="ExecutedStep">
+            <Childs />
+            <Id>f598f206-2dac-41b5-a648-85fd5d2958cf</Id>
+            <Parent z:Ref="i36" />
+            <PropertyValues>
+              <PropertyValue z:Id="i38">
+                <PropertyName>CSCode</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:string">data_table.Columns.Add();</_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text>Добавляем пустую строку в пустой dt (другого ни чего не придумал)</Text>
+            <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+          </AbstractStep>
+        </Childs>
+        <Id>20c95e31-a13a-4f5a-b720-0f6cdbfd8854</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i39">
+            <PropertyName>To</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression>Convert.ToInt32(table["columnCount"].ToString()) + 1</_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+          <PropertyValue z:Id="i40">
+            <PropertyName>Index</PropertyName>
+            <_dataType>Expression</_dataType>
+            <_expression></_expression>
+            <_screenShotBase64 i:nil="true" />
+            <_value i:nil="true" />
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>false</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.LoopFor</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i41" i:type="CommentStep">
+        <Childs />
         <Id>a082c1d9-b665-4499-b684-097d7f4dbf0e</Id>
         <Parent z:Ref="i2" />
         <PropertyValues />
         <SelectedOptionId i:nil="true" />
         <Text>Заполняем основные данные раскидывая их по координатам </Text>
       </AbstractStep>
-      <AbstractStep z:Id="i28" i:type="ExecutedStep">
+      <AbstractStep z:Id="i42" i:type="ExecutedStep">
         <Childs>
-          <AbstractStep z:Id="i29" i:type="ExecutedStep">
+          <AbstractStep z:Id="i43" i:type="ExecutedStep">
+            <Childs />
+            <Id>2c106ea8-4ff4-45fe-acb4-e439bc4a1e0c</Id>
+            <Parent z:Ref="i42" />
+            <PropertyValues>
+              <PropertyValue z:Id="i44">
+                <PropertyName>CSCode</PropertyName>
+                <_dataType>Value</_dataType>
+                <_expression i:nil="true" />
+                <_screenShotBase64 i:nil="true" />
+                <_value xmlns:d9p1="http://www.w3.org/2001/XMLSchema" i:type="d9p1:string">//data_table.Rows.Add();
+//data_table.Rows.InsertAt(data_table.NewRow(), Convert.ToInt32(cell["rowIndex"].ToString()));
+data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(cell["columnIndex"].ToString())] = cell["text"].ToString();
+</_value>
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i45" i:type="ExecutedStep">
+            <Childs />
+            <Id>bca6cb5d-5677-4664-8ca1-3e046f761ba6</Id>
+            <Parent z:Ref="i42" />
+            <PropertyValues />
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>true</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i46" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i30" i:type="ExecutedStep">
+              <AbstractStep z:Id="i47" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i31" i:type="ExecutedStep">
-                    <Childs>
-                      <AbstractStep z:Id="i32" i:type="ExecutedStep">
-                        <Childs>
-                          <AbstractStep z:Id="i33" i:type="ExecutedStep">
-                            <Childs />
-                            <Id>99a83879-43ae-4192-989a-a528a10fdc22</Id>
-                            <Parent z:Ref="i32" />
-                            <PropertyValues>
-                              <PropertyValue z:Id="i34">
-                                <PropertyName>CSCode</PropertyName>
-                                <_dataType>Value</_dataType>
-                                <_expression i:nil="true" />
-                                <_screenShotBase64 i:nil="true" />
-                                <_value xmlns:d17p1="http://www.w3.org/2001/XMLSchema" i:type="d17p1:string">data_table.Rows.Add();</_value>
-                                <_xpathSettings xmlns:d17p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                              </PropertyValue>
-                            </PropertyValues>
-                            <SelectedOptionId i:nil="true" />
-                            <EnableStatus>true</EnableStatus>
-                            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                            <RetryCount>-1</RetryCount>
-                            <Text></Text>
-                            <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
-                          </AbstractStep>
-                        </Childs>
-                        <Id>bf1c7496-0712-4e7a-a7db-0bb0d5c2ebbf</Id>
-                        <Parent z:Ref="i31" />
-                        <PropertyValues />
-                        <SelectedOptionId i:nil="true" />
-                        <EnableStatus>true</EnableStatus>
-                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                        <RetryCount>-1</RetryCount>
-                        <Text></Text>
-                        <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
-                      </AbstractStep>
-                      <AbstractStep z:Id="i35" i:type="ExecutedStep">
-                        <Childs />
-                        <Id>de2bbaa5-105e-4366-a3cf-37bc2efdff11</Id>
-                        <Parent z:Ref="i31" />
-                        <PropertyValues />
-                        <SelectedOptionId i:nil="true" />
-                        <EnableStatus>true</EnableStatus>
-                        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                        <RetryCount>-1</RetryCount>
-                        <Text></Text>
-                        <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
-                      </AbstractStep>
-                    </Childs>
-                    <Id>81c8265d-c3a5-4f48-b0d8-a84344695862</Id>
-                    <Parent z:Ref="i30" />
-                    <PropertyValues>
-                      <PropertyValue z:Id="i36">
-                        <PropertyName>Condition</PropertyName>
-                        <_dataType>Expression</_dataType>
-                        <_expression>data_table.Rows.Count &lt; Convert.ToInt32(cell["rowIndex"].ToString())</_expression>
-                        <_screenShotBase64 i:nil="true" />
-                        <_value i:nil="true" />
-                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                      </PropertyValue>
-                    </PropertyValues>
-                    <SelectedOptionId i:nil="true" />
-                    <EnableStatus>true</EnableStatus>
-                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                    <RetryCount>-1</RetryCount>
-                    <Text></Text>
-                    <_activityFullName>BR.Core.Base.If</_activityFullName>
-                  </AbstractStep>
-                  <AbstractStep z:Id="i37" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i48" i:type="ExecutedStep">
                     <Childs />
-                    <Id>89742f35-045c-410a-bf48-07801e985539</Id>
-                    <Parent z:Ref="i30" />
+                    <Id>10683e68-e208-4489-b86c-f3e6ce25859e</Id>
+                    <Parent z:Ref="i47" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i38">
-                        <PropertyName>Text</PropertyName>
-                        <_dataType>Expression</_dataType>
-                        <_expression>cell["text"].ToString()</_expression>
-                        <_screenShotBase64 i:nil="true" />
-                        <_value i:nil="true" />
-                        <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
-                      </PropertyValue>
-                    </PropertyValues>
-                    <SelectedOptionId i:nil="true" />
-                    <EnableStatus>true</EnableStatus>
-                    <ExceptionHandlingMode>Default</ExceptionHandlingMode>
-                    <RetryCount>-1</RetryCount>
-                    <Text></Text>
-                    <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
-                  </AbstractStep>
-                  <AbstractStep z:Id="i39" i:type="ExecutedStep">
-                    <Childs />
-                    <Id>2c106ea8-4ff4-45fe-acb4-e439bc4a1e0c</Id>
-                    <Parent z:Ref="i30" />
-                    <PropertyValues>
-                      <PropertyValue z:Id="i40">
+                      <PropertyValue z:Id="i49">
                         <PropertyName>CSCode</PropertyName>
                         <_dataType>Value</_dataType>
                         <_expression i:nil="true" />
                         <_screenShotBase64 i:nil="true" />
-                        <_value xmlns:d13p1="http://www.w3.org/2001/XMLSchema" i:type="d13p1:string">//data_table.Rows.Add(data_table.NewRow());
-data_table.Rows.InsertAt(data_table.NewRow(), Convert.ToInt32(cell["rowIndex"].ToString()));
-data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(cell["columnIndex"].ToString())] = cell["text"].ToString();</_value>
+                        <_value xmlns:d13p1="http://www.w3.org/2001/XMLSchema" i:type="d13p1:string">data_table.Columns.Add(cell["text"].ToString()+"_2");
+</_value>
                         <_xpathSettings xmlns:d13p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
                       </PropertyValue>
                     </PropertyValues>
@@ -398,8 +483,8 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
                     <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
                   </AbstractStep>
                 </Childs>
-                <Id>cdfdf265-7b4a-45a3-861a-daa8a126eda3</Id>
-                <Parent z:Ref="i29" />
+                <Id>265aa8a0-f6c2-4822-a78a-076daa7f3d75</Id>
+                <Parent z:Ref="i46" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -408,10 +493,56 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
                 <Text></Text>
                 <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i41" i:type="ExecutedStep">
+              <AbstractStep z:Id="i50" i:type="ExecutedStep">
+                <Childs />
+                <Id>0defda62-19f3-4900-b9ea-9a802a007940</Id>
+                <Parent z:Ref="i46" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfFalse</_activityFullName>
+              </AbstractStep>
+            </Childs>
+            <Id>2a8d8512-c11f-4e8d-a51e-ef7598965caf</Id>
+            <Parent z:Ref="i42" />
+            <PropertyValues>
+              <PropertyValue z:Id="i51">
+                <PropertyName>Condition</PropertyName>
+                <_dataType>Expression</_dataType>
+                <_expression>Convert.ToInt32(cell["columnSpan"].ToString()) &gt; 1</_expression>
+                <_screenShotBase64 i:nil="true" />
+                <_value i:nil="true" />
+                <_xpathSettings xmlns:d9p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+              </PropertyValue>
+            </PropertyValues>
+            <SelectedOptionId i:nil="true" />
+            <EnableStatus>false</EnableStatus>
+            <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+            <RetryCount>-1</RetryCount>
+            <Text></Text>
+            <_activityFullName>BR.Core.Base.If</_activityFullName>
+          </AbstractStep>
+          <AbstractStep z:Id="i52" i:type="ExecutedStep">
+            <Childs>
+              <AbstractStep z:Id="i53" i:type="ExecutedStep">
+                <Childs />
+                <Id>cdfdf265-7b4a-45a3-861a-daa8a126eda3</Id>
+                <Parent z:Ref="i52" />
+                <PropertyValues />
+                <SelectedOptionId i:nil="true" />
+                <EnableStatus>true</EnableStatus>
+                <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+                <RetryCount>-1</RetryCount>
+                <Text></Text>
+                <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
+              </AbstractStep>
+              <AbstractStep z:Id="i54" i:type="ExecutedStep">
                 <Childs />
                 <Id>63478899-0c06-4850-8fbd-247c518b538c</Id>
-                <Parent z:Ref="i29" />
+                <Parent z:Ref="i52" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -422,9 +553,9 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
               </AbstractStep>
             </Childs>
             <Id>d5fc8537-05ef-4cc0-8e3d-37e07475a6b3</Id>
-            <Parent z:Ref="i28" />
+            <Parent z:Ref="i42" />
             <PropertyValues>
-              <PropertyValue z:Id="i42">
+              <PropertyValue z:Id="i55">
                 <PropertyName>Condition</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>Convert.ToInt32(cell["rowIndex"].ToString()) &gt; 0</_expression>
@@ -434,7 +565,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
               </PropertyValue>
             </PropertyValues>
             <SelectedOptionId i:nil="true" />
-            <EnableStatus>true</EnableStatus>
+            <EnableStatus>false</EnableStatus>
             <ExceptionHandlingMode>Default</ExceptionHandlingMode>
             <RetryCount>-1</RetryCount>
             <Text></Text>
@@ -444,7 +575,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
         <Id>51ddfed8-ff94-4d25-91be-cfeabac45aec</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i43">
+          <PropertyValue z:Id="i56">
             <PropertyName>Collection</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>table["cells"].AsArray()</_expression>
@@ -452,7 +583,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i44">
+          <PropertyValue z:Id="i57">
             <PropertyName>Iterator</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>cell</_expression>
@@ -460,7 +591,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i45">
+          <PropertyValue z:Id="i58">
             <PropertyName>Counter</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression></_expression>
@@ -476,7 +607,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
         <Text></Text>
         <_activityFullName>BR.Core.Base.LoopForEach</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i46" i:type="ExecutedStep">
+      <AbstractStep z:Id="i59" i:type="ExecutedStep">
         <Childs />
         <Id>592d12df-9a73-45f2-b190-91b01e62b57a</Id>
         <Parent z:Ref="i2" />
@@ -488,7 +619,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
         <Text></Text>
         <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i47" i:type="ExecutedStep">
+      <AbstractStep z:Id="i60" i:type="ExecutedStep">
         <Childs />
         <Id>abb01979-f232-4a9e-8edb-73e32b6fcac2</Id>
         <Parent z:Ref="i2" />
@@ -500,7 +631,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
         <Text></Text>
         <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i48" i:type="ExecutedStep">
+      <AbstractStep z:Id="i61" i:type="ExecutedStep">
         <Childs />
         <Id>8dc0f19b-4acf-4bd0-8ea4-44df32aed16a</Id>
         <Parent z:Ref="i2" />
@@ -526,7 +657,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
   <Name>table.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i49">
+    <Parameter z:Id="i62">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>table</Name>

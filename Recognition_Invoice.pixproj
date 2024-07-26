@@ -60,6 +60,10 @@
       <IsMain>false</IsMain>
       <Path>test2.pix</Path>
     </ProjectFileItem>
+    <ProjectFileItem z:Id="i11">
+      <IsMain>false</IsMain>
+      <Path>Dbrain\main.pix</Path>
+    </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
   <Name>Recognition_Invoice</Name>
