@@ -34,7 +34,7 @@
           <PropertyValue z:Id="i6">
             <PropertyName>FilePath</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>@"C:\DEV_PIX\Dbrain_Artem\IN_Files\PIX PagСчет на оплату № 16284 от 04.07.2024eImage_2_yandex.json"</_expression>
+            <_expression>@"C:\DEV_PIX\Dbrain_Artem\IN_Files\Yandex\PIX PagСчет на оплату № 16284 от 04.07.2024eImage_2.json"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -57,7 +57,7 @@
           </PropertyValue>
         </PropertyValues>
         <SelectedOptionId i:nil="true" />
-        <EnableStatus>false</EnableStatus>
+        <EnableStatus>true</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
         <Text></Text>
@@ -71,7 +71,7 @@
           <PropertyValue z:Id="i10">
             <PropertyName>FilePath</PropertyName>
             <_dataType>Expression</_dataType>
-            <_expression>@"C:\DEV_PIX\Dbrain_Artem\для json yandex\createPaymentInvoice_yandex.json"</_expression>
+            <_expression>@"C:\DEV_PIX\Dbrain_Artem\IN_Files\Yandex\createPaymentInvoice.json"</_expression>
             <_screenShotBase64 i:nil="true" />
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
@@ -94,7 +94,7 @@
           </PropertyValue>
         </PropertyValues>
         <SelectedOptionId i:nil="true" />
-        <EnableStatus>true</EnableStatus>
+        <EnableStatus>false</EnableStatus>
         <ExceptionHandlingMode>Default</ExceptionHandlingMode>
         <RetryCount>-1</RetryCount>
         <Text></Text>

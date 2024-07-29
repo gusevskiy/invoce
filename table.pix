@@ -57,7 +57,30 @@
         <Text></Text>
         <_activityFullName>Activities.BaseCollections.DT.CreateTable</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i7" i:type="CommentStep">
+      <AbstractStep z:Id="i7" i:type="ExecutedStep">
+        <Childs />
+        <Id>3467288d-136d-4161-a790-c370a065cb65</Id>
+        <Parent z:Ref="i2" />
+        <PropertyValues>
+          <PropertyValue z:Id="i8">
+            <PropertyName>CSCode</PropertyName>
+            <_dataType>Value</_dataType>
+            <_expression i:nil="true" />
+            <_screenShotBase64 i:nil="true" />
+            <_value xmlns:d7p1="http://www.w3.org/2001/XMLSchema" i:type="d7p1:string">data_table.Rows.Add();
+data_table.Rows.Add();
+data_table.Rows.Add();</_value>
+            <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
+          </PropertyValue>
+        </PropertyValues>
+        <SelectedOptionId i:nil="true" />
+        <EnableStatus>true</EnableStatus>
+        <ExceptionHandlingMode>Default</ExceptionHandlingMode>
+        <RetryCount>-1</RetryCount>
+        <Text></Text>
+        <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
+      </AbstractStep>
+      <AbstractStep z:Id="i9" i:type="CommentStep">
         <Childs />
         <Id>21cfdf9d-e5e2-4f83-a459-e1b1b3ae6367</Id>
         <Parent z:Ref="i2" />
@@ -71,34 +94,34 @@ columnSpan - если больше 1 то есть обьеденение с с�
 rowSpan - если больше 1 то есть обьединение с соседней строкой
 text - текст значения ячейки</Text>
       </AbstractStep>
-      <AbstractStep z:Id="i8" i:type="ExecutedStep">
+      <AbstractStep z:Id="i10" i:type="ExecutedStep">
         <Childs>
-          <AbstractStep z:Id="i9" i:type="CommentStep">
+          <AbstractStep z:Id="i11" i:type="CommentStep">
             <Childs />
             <Id>388bb276-e33b-46a3-b3a3-6c9d53c4f02b</Id>
-            <Parent z:Ref="i8" />
+            <Parent z:Ref="i10" />
             <PropertyValues />
             <SelectedOptionId i:nil="true" />
             <Text>Создаем заголовки</Text>
           </AbstractStep>
-          <AbstractStep z:Id="i10" i:type="CommentStep">
+          <AbstractStep z:Id="i12" i:type="CommentStep">
             <Childs />
             <Id>2e736963-d4ad-450c-b803-1761abad54ee</Id>
-            <Parent z:Ref="i8" />
+            <Parent z:Ref="i10" />
             <PropertyValues />
             <SelectedOptionId i:nil="true" />
             <Text>Если rowIndex = 0 то считаем это заголовками</Text>
           </AbstractStep>
-          <AbstractStep z:Id="i11" i:type="ExecutedStep">
+          <AbstractStep z:Id="i13" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i12" i:type="ExecutedStep">
+              <AbstractStep z:Id="i14" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i13" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i15" i:type="ExecutedStep">
                     <Childs />
                     <Id>19ad3b96-b7f1-4623-96bc-3a6c1060563a</Id>
-                    <Parent z:Ref="i12" />
+                    <Parent z:Ref="i14" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i14">
+                      <PropertyValue z:Id="i16">
                         <PropertyName>CSCode</PropertyName>
                         <_dataType>Value</_dataType>
                         <_expression i:nil="true" />
@@ -117,7 +140,7 @@ text - текст значения ячейки</Text>
                   </AbstractStep>
                 </Childs>
                 <Id>dda90e79-b60e-4a20-b4f7-cd786ce3ae02</Id>
-                <Parent z:Ref="i11" />
+                <Parent z:Ref="i13" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -126,10 +149,10 @@ text - текст значения ячейки</Text>
                 <Text></Text>
                 <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i15" i:type="ExecutedStep">
+              <AbstractStep z:Id="i17" i:type="ExecutedStep">
                 <Childs />
                 <Id>4dc38322-9c4e-436e-a84a-de064b1b546c</Id>
-                <Parent z:Ref="i11" />
+                <Parent z:Ref="i13" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -140,9 +163,9 @@ text - текст значения ячейки</Text>
               </AbstractStep>
             </Childs>
             <Id>649e9114-f47b-43a4-8af8-d874fae30b50</Id>
-            <Parent z:Ref="i8" />
+            <Parent z:Ref="i10" />
             <PropertyValues>
-              <PropertyValue z:Id="i16">
+              <PropertyValue z:Id="i18">
                 <PropertyName>Condition</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>Convert.ToInt32(cell["rowIndex"].ToString()) == 0</_expression>
@@ -158,24 +181,24 @@ text - текст значения ячейки</Text>
             <Text></Text>
             <_activityFullName>BR.Core.Base.If</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i17" i:type="CommentStep">
+          <AbstractStep z:Id="i19" i:type="CommentStep">
             <Childs />
             <Id>6d20c503-f358-4d9d-86a8-811fae90895a</Id>
-            <Parent z:Ref="i8" />
+            <Parent z:Ref="i10" />
             <PropertyValues />
             <SelectedOptionId i:nil="true" />
             <Text>Если есть обьединенные столбцы то порядковый номер столбца будет пропущен. По этому создаем рядом еще с таким же названием.</Text>
           </AbstractStep>
-          <AbstractStep z:Id="i18" i:type="ExecutedStep">
+          <AbstractStep z:Id="i20" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i19" i:type="ExecutedStep">
+              <AbstractStep z:Id="i21" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i20" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i22" i:type="ExecutedStep">
                     <Childs />
                     <Id>7c074a0d-3f56-402f-ac6d-39033b825ab7</Id>
-                    <Parent z:Ref="i19" />
+                    <Parent z:Ref="i21" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i21">
+                      <PropertyValue z:Id="i23">
                         <PropertyName>CSCode</PropertyName>
                         <_dataType>Value</_dataType>
                         <_expression i:nil="true" />
@@ -194,7 +217,7 @@ text - текст значения ячейки</Text>
                   </AbstractStep>
                 </Childs>
                 <Id>e45534e9-f5d5-4ef2-a8e5-f85552f01cdd</Id>
-                <Parent z:Ref="i18" />
+                <Parent z:Ref="i20" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -203,10 +226,10 @@ text - текст значения ячейки</Text>
                 <Text></Text>
                 <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i22" i:type="ExecutedStep">
+              <AbstractStep z:Id="i24" i:type="ExecutedStep">
                 <Childs />
                 <Id>34d118bb-e8af-4bdf-9394-2cc7ea36f305</Id>
-                <Parent z:Ref="i18" />
+                <Parent z:Ref="i20" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -217,9 +240,9 @@ text - текст значения ячейки</Text>
               </AbstractStep>
             </Childs>
             <Id>3199198b-1ac3-44e4-960b-160e1a89ab09</Id>
-            <Parent z:Ref="i8" />
+            <Parent z:Ref="i10" />
             <PropertyValues>
-              <PropertyValue z:Id="i23">
+              <PropertyValue z:Id="i25">
                 <PropertyName>Condition</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>Convert.ToInt32(cell["columnSpan"].ToString()) == 2</_expression>
@@ -229,7 +252,7 @@ text - текст значения ячейки</Text>
               </PropertyValue>
             </PropertyValues>
             <SelectedOptionId i:nil="true" />
-            <EnableStatus>true</EnableStatus>
+            <EnableStatus>false</EnableStatus>
             <ExceptionHandlingMode>Default</ExceptionHandlingMode>
             <RetryCount>-1</RetryCount>
             <Text></Text>
@@ -239,7 +262,7 @@ text - текст значения ячейки</Text>
         <Id>4d4c5bf5-137d-4c9b-8571-afc907241cd5</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i24">
+          <PropertyValue z:Id="i26">
             <PropertyName>Collection</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>table["cells"].AsArray()</_expression>
@@ -247,7 +270,7 @@ text - текст значения ячейки</Text>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i25">
+          <PropertyValue z:Id="i27">
             <PropertyName>Iterator</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>cell</_expression>
@@ -255,7 +278,7 @@ text - текст значения ячейки</Text>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i26">
+          <PropertyValue z:Id="i28">
             <PropertyName>Counter</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression></_expression>
@@ -271,7 +294,7 @@ text - текст значения ячейки</Text>
         <Text>Цикл для каждого "Формируем заголовки столбцов" </Text>
         <_activityFullName>BR.Core.Base.LoopForEach</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i27" i:type="CommentStep">
+      <AbstractStep z:Id="i29" i:type="CommentStep">
         <Childs />
         <Id>cbb5dd4b-fe53-4005-9b42-294feae0dbb7</Id>
         <Parent z:Ref="i2" />
@@ -279,12 +302,12 @@ text - текст значения ячейки</Text>
         <SelectedOptionId i:nil="true" />
         <Text>Добавляем сразу строки в dt. Их кол-во указано в параметре table["rowCount"]</Text>
       </AbstractStep>
-      <AbstractStep z:Id="i28" i:type="ExecutedStep">
+      <AbstractStep z:Id="i30" i:type="ExecutedStep">
         <Childs />
         <Id>752c8d60-9328-466c-9671-6ee63eda7fe9</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i29">
+          <PropertyValue z:Id="i31">
             <PropertyName>Value</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>Convert.ToInt32(table["rowCount"].ToString())</_expression>
@@ -292,7 +315,7 @@ text - текст значения ячейки</Text>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i30">
+          <PropertyValue z:Id="i32">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>test</_expression>
@@ -308,14 +331,14 @@ text - текст значения ячейки</Text>
         <Text></Text>
         <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i31" i:type="ExecutedStep">
+      <AbstractStep z:Id="i33" i:type="ExecutedStep">
         <Childs>
-          <AbstractStep z:Id="i32" i:type="ExecutedStep">
+          <AbstractStep z:Id="i34" i:type="ExecutedStep">
             <Childs />
             <Id>99a83879-43ae-4192-989a-a528a10fdc22</Id>
-            <Parent z:Ref="i31" />
+            <Parent z:Ref="i33" />
             <PropertyValues>
-              <PropertyValue z:Id="i33">
+              <PropertyValue z:Id="i35">
                 <PropertyName>CSCode</PropertyName>
                 <_dataType>Value</_dataType>
                 <_expression i:nil="true" />
@@ -335,7 +358,7 @@ text - текст значения ячейки</Text>
         <Id>0e8b45c6-dff3-4e45-aa2d-6cd697ab97bb</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i34">
+          <PropertyValue z:Id="i36">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>Convert.ToInt32(table["rowCount"].ToString()) + 1</_expression>
@@ -343,7 +366,7 @@ text - текст значения ячейки</Text>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i35">
+          <PropertyValue z:Id="i37">
             <PropertyName>Index</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression></_expression>
@@ -359,14 +382,14 @@ text - текст значения ячейки</Text>
         <Text></Text>
         <_activityFullName>BR.Core.Base.LoopFor</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i36" i:type="ExecutedStep">
+      <AbstractStep z:Id="i38" i:type="ExecutedStep">
         <Childs>
-          <AbstractStep z:Id="i37" i:type="ExecutedStep">
+          <AbstractStep z:Id="i39" i:type="ExecutedStep">
             <Childs />
             <Id>f598f206-2dac-41b5-a648-85fd5d2958cf</Id>
-            <Parent z:Ref="i36" />
+            <Parent z:Ref="i38" />
             <PropertyValues>
-              <PropertyValue z:Id="i38">
+              <PropertyValue z:Id="i40">
                 <PropertyName>CSCode</PropertyName>
                 <_dataType>Value</_dataType>
                 <_expression i:nil="true" />
@@ -386,7 +409,7 @@ text - текст значения ячейки</Text>
         <Id>20c95e31-a13a-4f5a-b720-0f6cdbfd8854</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i39">
+          <PropertyValue z:Id="i41">
             <PropertyName>To</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>Convert.ToInt32(table["columnCount"].ToString()) + 1</_expression>
@@ -394,7 +417,7 @@ text - текст значения ячейки</Text>
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i40">
+          <PropertyValue z:Id="i42">
             <PropertyName>Index</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression></_expression>
@@ -410,7 +433,7 @@ text - текст значения ячейки</Text>
         <Text></Text>
         <_activityFullName>BR.Core.Base.LoopFor</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i41" i:type="CommentStep">
+      <AbstractStep z:Id="i43" i:type="CommentStep">
         <Childs />
         <Id>a082c1d9-b665-4499-b684-097d7f4dbf0e</Id>
         <Parent z:Ref="i2" />
@@ -418,14 +441,14 @@ text - текст значения ячейки</Text>
         <SelectedOptionId i:nil="true" />
         <Text>Заполняем основные данные раскидывая их по координатам </Text>
       </AbstractStep>
-      <AbstractStep z:Id="i42" i:type="ExecutedStep">
+      <AbstractStep z:Id="i44" i:type="ExecutedStep">
         <Childs>
-          <AbstractStep z:Id="i43" i:type="ExecutedStep">
+          <AbstractStep z:Id="i45" i:type="ExecutedStep">
             <Childs />
             <Id>2c106ea8-4ff4-45fe-acb4-e439bc4a1e0c</Id>
-            <Parent z:Ref="i42" />
+            <Parent z:Ref="i44" />
             <PropertyValues>
-              <PropertyValue z:Id="i44">
+              <PropertyValue z:Id="i46">
                 <PropertyName>CSCode</PropertyName>
                 <_dataType>Value</_dataType>
                 <_expression i:nil="true" />
@@ -444,10 +467,10 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
             <Text></Text>
             <_activityFullName>BR.Core.Base.ExecuteCSCode</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i45" i:type="ExecutedStep">
+          <AbstractStep z:Id="i47" i:type="ExecutedStep">
             <Childs />
             <Id>bca6cb5d-5677-4664-8ca1-3e046f761ba6</Id>
-            <Parent z:Ref="i42" />
+            <Parent z:Ref="i44" />
             <PropertyValues />
             <SelectedOptionId i:nil="true" />
             <EnableStatus>true</EnableStatus>
@@ -456,16 +479,16 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
             <Text></Text>
             <_activityFullName>BR.Core.Base.WriteLog</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i46" i:type="ExecutedStep">
+          <AbstractStep z:Id="i48" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i47" i:type="ExecutedStep">
+              <AbstractStep z:Id="i49" i:type="ExecutedStep">
                 <Childs>
-                  <AbstractStep z:Id="i48" i:type="ExecutedStep">
+                  <AbstractStep z:Id="i50" i:type="ExecutedStep">
                     <Childs />
                     <Id>10683e68-e208-4489-b86c-f3e6ce25859e</Id>
-                    <Parent z:Ref="i47" />
+                    <Parent z:Ref="i49" />
                     <PropertyValues>
-                      <PropertyValue z:Id="i49">
+                      <PropertyValue z:Id="i51">
                         <PropertyName>CSCode</PropertyName>
                         <_dataType>Value</_dataType>
                         <_expression i:nil="true" />
@@ -484,7 +507,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
                   </AbstractStep>
                 </Childs>
                 <Id>265aa8a0-f6c2-4822-a78a-076daa7f3d75</Id>
-                <Parent z:Ref="i46" />
+                <Parent z:Ref="i48" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -493,10 +516,10 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
                 <Text></Text>
                 <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i50" i:type="ExecutedStep">
+              <AbstractStep z:Id="i52" i:type="ExecutedStep">
                 <Childs />
                 <Id>0defda62-19f3-4900-b9ea-9a802a007940</Id>
-                <Parent z:Ref="i46" />
+                <Parent z:Ref="i48" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -507,9 +530,9 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
               </AbstractStep>
             </Childs>
             <Id>2a8d8512-c11f-4e8d-a51e-ef7598965caf</Id>
-            <Parent z:Ref="i42" />
+            <Parent z:Ref="i44" />
             <PropertyValues>
-              <PropertyValue z:Id="i51">
+              <PropertyValue z:Id="i53">
                 <PropertyName>Condition</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>Convert.ToInt32(cell["columnSpan"].ToString()) &gt; 1</_expression>
@@ -525,12 +548,12 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
             <Text></Text>
             <_activityFullName>BR.Core.Base.If</_activityFullName>
           </AbstractStep>
-          <AbstractStep z:Id="i52" i:type="ExecutedStep">
+          <AbstractStep z:Id="i54" i:type="ExecutedStep">
             <Childs>
-              <AbstractStep z:Id="i53" i:type="ExecutedStep">
+              <AbstractStep z:Id="i55" i:type="ExecutedStep">
                 <Childs />
                 <Id>cdfdf265-7b4a-45a3-861a-daa8a126eda3</Id>
-                <Parent z:Ref="i52" />
+                <Parent z:Ref="i54" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -539,10 +562,10 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
                 <Text></Text>
                 <_activityFullName>BR.Core.Base.IfTrue</_activityFullName>
               </AbstractStep>
-              <AbstractStep z:Id="i54" i:type="ExecutedStep">
+              <AbstractStep z:Id="i56" i:type="ExecutedStep">
                 <Childs />
                 <Id>63478899-0c06-4850-8fbd-247c518b538c</Id>
-                <Parent z:Ref="i52" />
+                <Parent z:Ref="i54" />
                 <PropertyValues />
                 <SelectedOptionId i:nil="true" />
                 <EnableStatus>true</EnableStatus>
@@ -553,9 +576,9 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
               </AbstractStep>
             </Childs>
             <Id>d5fc8537-05ef-4cc0-8e3d-37e07475a6b3</Id>
-            <Parent z:Ref="i42" />
+            <Parent z:Ref="i44" />
             <PropertyValues>
-              <PropertyValue z:Id="i55">
+              <PropertyValue z:Id="i57">
                 <PropertyName>Condition</PropertyName>
                 <_dataType>Expression</_dataType>
                 <_expression>Convert.ToInt32(cell["rowIndex"].ToString()) &gt; 0</_expression>
@@ -575,7 +598,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
         <Id>51ddfed8-ff94-4d25-91be-cfeabac45aec</Id>
         <Parent z:Ref="i2" />
         <PropertyValues>
-          <PropertyValue z:Id="i56">
+          <PropertyValue z:Id="i58">
             <PropertyName>Collection</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>table["cells"].AsArray()</_expression>
@@ -583,7 +606,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i57">
+          <PropertyValue z:Id="i59">
             <PropertyName>Iterator</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression>cell</_expression>
@@ -591,7 +614,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
             <_value i:nil="true" />
             <_xpathSettings xmlns:d7p1="http://schemas.datacontract.org/2004/07/BR.XPath" i:nil="true" />
           </PropertyValue>
-          <PropertyValue z:Id="i58">
+          <PropertyValue z:Id="i60">
             <PropertyName>Counter</PropertyName>
             <_dataType>Expression</_dataType>
             <_expression></_expression>
@@ -607,7 +630,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
         <Text></Text>
         <_activityFullName>BR.Core.Base.LoopForEach</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i59" i:type="ExecutedStep">
+      <AbstractStep z:Id="i61" i:type="ExecutedStep">
         <Childs />
         <Id>592d12df-9a73-45f2-b190-91b01e62b57a</Id>
         <Parent z:Ref="i2" />
@@ -619,7 +642,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
         <Text></Text>
         <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i60" i:type="ExecutedStep">
+      <AbstractStep z:Id="i62" i:type="ExecutedStep">
         <Childs />
         <Id>abb01979-f232-4a9e-8edb-73e32b6fcac2</Id>
         <Parent z:Ref="i2" />
@@ -631,7 +654,7 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
         <Text></Text>
         <_activityFullName>BR.Core.Base.Assign</_activityFullName>
       </AbstractStep>
-      <AbstractStep z:Id="i61" i:type="ExecutedStep">
+      <AbstractStep z:Id="i63" i:type="ExecutedStep">
         <Childs />
         <Id>8dc0f19b-4acf-4bd0-8ea4-44df32aed16a</Id>
         <Parent z:Ref="i2" />
@@ -657,12 +680,19 @@ data_table.Rows[Convert.ToInt32(cell["rowIndex"].ToString())][Convert.ToInt32(ce
   <Name>table.pix</Name>
   <Namespaces xmlns:d2p1="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
   <Params>
-    <Parameter z:Id="i62">
+    <Parameter z:Id="i64">
       <DefaultValueExpression></DefaultValueExpression>
       <Description></Description>
       <Name>table</Name>
       <RunnerType>None</RunnerType>
       <TypeString>System.Text.Json.Nodes.JsonNode</TypeString>
+    </Parameter>
+    <Parameter z:Id="i65">
+      <DefaultValueExpression></DefaultValueExpression>
+      <Description></Description>
+      <Name>name_seller</Name>
+      <RunnerType>None</RunnerType>
+      <TypeString>System.String</TypeString>
     </Parameter>
   </Params>
   <TemplateVersion xmlns:d2p1="http://schemas.datacontract.org/2004/07/System" i:nil="true" />
