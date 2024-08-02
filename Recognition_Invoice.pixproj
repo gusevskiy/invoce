@@ -30,43 +30,59 @@
     </ProjectFileItem>
     <ProjectFileItem z:Id="i3">
       <IsMain>false</IsMain>
-      <Path>PdfImages.pix</Path>
+      <Path>LoadConfig.pix</Path>
     </ProjectFileItem>
     <ProjectFileItem z:Id="i4">
       <IsMain>false</IsMain>
-      <Path>test.pix</Path>
+      <Path>read_json.pix</Path>
     </ProjectFileItem>
     <ProjectFileItem z:Id="i5">
       <IsMain>false</IsMain>
-      <Path>json_read.pix</Path>
+      <Path>Config\ConfigFile.exsample.xlsx</Path>
     </ProjectFileItem>
     <ProjectFileItem z:Id="i6">
       <IsMain>false</IsMain>
-      <Path>parse_json_create_dt.pix</Path>
+      <Path>Config\ConfigFile.xlsx</Path>
     </ProjectFileItem>
     <ProjectFileItem z:Id="i7">
       <IsMain>false</IsMain>
-      <Path>json_read — копия.pix</Path>
+      <Path>OSR\check_iam_token_time.pix</Path>
     </ProjectFileItem>
     <ProjectFileItem z:Id="i8">
       <IsMain>false</IsMain>
-      <Path>test_json.pix</Path>
+      <Path>OSR\get_iam_token.pix</Path>
     </ProjectFileItem>
     <ProjectFileItem z:Id="i9">
       <IsMain>false</IsMain>
-      <Path>table.pix</Path>
+      <Path>OSR\OCR_files.pix</Path>
     </ProjectFileItem>
     <ProjectFileItem z:Id="i10">
       <IsMain>false</IsMain>
-      <Path>test2.pix</Path>
+      <Path>OSR\PdfImages.pix</Path>
     </ProjectFileItem>
     <ProjectFileItem z:Id="i11">
       <IsMain>false</IsMain>
-      <Path>Dbrain\main.pix</Path>
+      <Path>test_table.pix</Path>
     </ProjectFileItem>
     <ProjectFileItem z:Id="i12">
       <IsMain>false</IsMain>
-      <Path>table_2.pix</Path>
+      <Path>preparation.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i13">
+      <IsMain>false</IsMain>
+      <Path>ParseJson\json_in_dt.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i14">
+      <IsMain>false</IsMain>
+      <Path>ParseJson\datatable.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i15">
+      <IsMain>false</IsMain>
+      <Path>GetInvoiceMail\ReadMail.pix</Path>
+    </ProjectFileItem>
+    <ProjectFileItem z:Id="i16">
+      <IsMain>false</IsMain>
+      <Path>ParseJson\sort_paint.pix</Path>
     </ProjectFileItem>
   </Files>
   <MasterUploadId i:nil="true" />
